@@ -9,10 +9,13 @@ class VideoCreateForm(forms.ModelForm):
         fields = ('title', 'description', 'thumbnail', 'upload')
 
         widgets = {
-            'title': forms.TextInput(attr={ # <input type="text" class="form_control"
+            'title': forms.TextInput(attrs={ # <input type="text" class="form_control"
                 'class': 'form-control',
             }),
             'description': forms.Textarea(attrs={ # <textarea class="form-control"
+                'class': "form-control",
+            }),
+            'thumbnail': forms.ClearableFileInput(attrs={ # <input type="file" class="form-control-file"
                 'class': "form-control-file",
             }),
             'upload': forms.ClearableFileInput(attrs={
