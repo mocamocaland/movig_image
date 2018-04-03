@@ -5,7 +5,7 @@ class Video(models.Model):
     """moving image"""
 
     title = models.CharField('動画タイトル', max_length=255)
-    descritption = models.TextField('説明(空欄可)', blank=True)
+    description = models.TextField('説明(空欄可)', blank=True)
     thumbnail = models.ImageField('サムネイル', upload_to='thumbnails/', null=True, blank=True) # /media/thumbnails/filename
     upload = models.FileField('ファイル', upload_to='uploads/%y/%m/%d/') # /media/uploads/2018/3/20 path
     

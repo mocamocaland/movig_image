@@ -3,7 +3,7 @@ from .models import Video
 
 
 class VideoCreateForm(forms.ModelForm):
-
+    
     class Meta:
         model = Video
         fields = ('title', 'description', 'thumbnail', 'upload')
@@ -13,7 +13,7 @@ class VideoCreateForm(forms.ModelForm):
                 'class': 'form-control',
             }),
             'description': forms.Textarea(attrs={ # <textarea class="form-control"
-                'class': "form-control",
+                'class': 'form-control',
             }),
             'thumbnail': forms.ClearableFileInput(attrs={ # <input type="file" class="form-control-file"
                 'class': "form-control-file",
